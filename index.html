@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+	<title>LIGHT AND DARK</title>
+	<meta charset="UTP-8">
+	<link rel="stylesheet" type="text/css" href="com.css">
+	<link rel="icon" type="image/png" href="image/icon.png" >
+</head>
+
+<body>
+
+<h1>LIGHT AND DARK</h1>
+<h1>arduino NodeMCU</h1>
+<h1><img src="image/IMG1.jpg" width="700"></h1>
+<h1>หลอดไฟเปิด/ปิด อัตโนมัติ</h1>
+
+<h1> </h1><br>
+<h1> </h1><br>
+
+<h1>อุปกรณ์</h1>
+<h1><img src="image/mo.png" width="300"></h1>
+<div class="cen">1. LDR Photoresistor Sensor Module โมดูลวัดแสง</div>
+<h1><img src="image/lay.png" width="300"></h1>
+<div class="cen">2. โมดูล รีเลย์ 1-Channel relay 5V 1 ช่อง isolation control Relay Module Shield 250V/10A Active LOW</div>
+<h1><img src="image/mcu.png" width="300"></h1>
+<div class="cen">3. arduino nodemcu board</div>
+<h1><img src="image/led.jpg" width="300"></h1>
+<div class="cen">4. ชุดหลอดไฟ</div>
+<h1><img src="image/jump.jpg" width="300"></h1>
+<div class="cen">5. สายจัมไฟ</div>
+
+<h1> </h1><br>
+<h1> </h1><br>
+
+<h1>วิธีการต่อวงจร</h1>
+<h1><img src="image/LDR.jpg" width="500"></h1>
+
+
+
+<h1> </h1><br>
+<h1> </h1><br>
+<h1>Code arduino</h1>
+<h1><img src="image/code.png" width="500"></h1>
+<p>int sensorPin = A0; // เซ็ตค่าอินพุตของเซนเซอร์ที่ช่อง A0 </p>
+<p>int sensorValue = 0; // ประกาศตัวแปรไว้เก็บค่าของ เซนเซอร์</p>
+<p>void setup() {</p>
+<p>pinMode(D2,OUTPUT); // เซ็ตค่าเอาต์พุตไว้ที่ช่อง D2</p>
+<p>Serial.begin(9600); // แสดงค่าบน Serial Monitor </p>
+<p>}</p>
+
+<p>void loop() {</p>
+<p>sensorValue = analogRead(sensorPin); // อ่านค่าจากเซนเซอร์วัดแสง มาเก็บที่ตัวแปร sensorValue</p>
+<p>Serial.println(sensorValue); // แสดงค่าของเซนเซอร์ที่จอ Serial Monitor </p>
+
+<p>if (sensorValue > 700) // ถ้าค่าเซ็นมากกว่า 700 ให้ทำ.... (ค่ายิ่งมากยิ่งมืด)</p>
+<p>{</p>
+<p>   digitalWrite(D2,HIGH); // ให้ D2 ปล่อยไฟ</p>
+<p>}</p>
+<p>else</p>
+<p>{</p>
+<p>  digitalWrite(D2,LOW); // ให้ D2 ไม่ปล่อยไฟ</p>
+<p>}</p>
+<p>}</p>
+
+<h1> </h1><br>
+<h1> </h1><br>
+
+<h1>ผลการทดลอง</h1>
+<p>
+   <b>Youtube: </b><a href="Cilck" target="_blank">https://github.com/it61070025</a><br>
+</p>
+<h3>เมื่อเอาสมุดมาปิดบริเวณเซนเซอร์ จะทำให้มืด ไฟก็จะติด</h3>
+<h1><img src="image/light.jpg" width="700"></h1>
+<h3>เมื่อสมุดไม่ปิดบริเวณเซนเซอร์ จะทำให้สว่าง ไฟก็จะติด</h3>
+<h1><img src="image/dark.jpg" width="700"></h1>
+
+<h1> </h1><br>
+<h1> </h1><br>
+
+<h1>สมาชิก</h1><br>
+<table>
+<tr>
+    <th>
+        <div>
+            <img src="image/a.jpg" width="200">
+        </div>
+    </th>
+    <th>
+        <div>
+            <img src="image/v.jpg" width="200">
+        </div>
+    </th>
+    <th>
+        <div>
+            <img src="image/c.jpg" width="200">
+        </div>
+    </th>
+    <th>
+        <div>
+            <img src="image/b.jpg" width="200">
+        </div>
+    </th>
+</tr>
+
+<tr>
+    <th>
+        <div>
+            <h3>61070042</h3>
+            <h3>นายโชคพิสิฐ หลิวรุ่งทรัพย์</h3>
+            <p>
+                <b>GitHub: </b><a href="https://www.github.com/chokpisit" target="_blank">https://www.github.com/chokpisit</a><br>
+            </p>
+        </div>
+    </th>
+    <th>
+        <div>
+            <h3>61070025</h3>
+            <h3>นายจิรวัฒน์ ประทุมถิ่น</h3>
+            <p>
+                <b>GitHub: </b><a href="https://github.com/it61070025" target="_blank">https://github.com/it61070025</a><br>
+            </p>
+        </div>
+    </th>
+    <th>
+        <div>
+            <h3>61070229</h3>
+            <h3>นางสาวศุภานันท์ ขวัญเพรา</h3>
+            <p>
+                <b>GitHub: </b><a href="https://github.com/Mymieeye" target="_blank">https://github.com/Mymieeye</a><br>
+            </p>
+        </div>
+    </th>
+    <th>
+        <div>
+            <h3>61070070</h3>
+            <h3>นายธนโชติ เลิศลาภนนท์</h3>
+            <p>
+                <b>GitHub: </b><a href="https://github.com/jer11698" target="_blank">https://github.com/jer11698</a><br>
+            </p>
+        </div>
+    </th>
+</tr>
+</table> 
+
+
+ </body>
+
+</body>
+
+</html>
